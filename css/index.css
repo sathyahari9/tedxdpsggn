@@ -282,13 +282,22 @@ p{
 	.x{
 		display: none;
 	}
+	.section{
+		padding: 4em 2em 4em;
+	}
 	.hero{
-		padding: 10em 4em 6em; 
+		padding: 10em 2em 6em; 
 	}
 	.social{
 		top: 40vh;
 		right: 1em;
 		transform: translateY(-70%);
+	}
+	.about{
+		padding: 4em 4em 5em;
+	}
+	.contact{
+		padding: 4em 4em 5em;
 	}
 }
 @media (max-width: 450px){
