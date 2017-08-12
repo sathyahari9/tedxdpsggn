@@ -12,6 +12,13 @@ h1,h2,h3{
 	font-weight: 400;
 	z-index: 1;
 }
+a{
+	color: inherit;
+	text-decoration: none;
+}
+a:hover{
+	color: #e62b1e;
+}
 .button{
 	background: none;
 	color: #fff;
@@ -37,6 +44,13 @@ h1,h2,h3{
 	height: 600px;
 	width: 600px;
 }
+.about p{
+	font-family: 'Open sans', sans-serif;
+	font-weight: 400;
+	color: #000;
+	text-align: justify;
+	font-size: 1.5em;
+}
 .social{
 	position: absolute;
 	top: 50vh;
@@ -48,14 +62,15 @@ h1,h2,h3{
 .item{
 	position: relative;
 	margin: auto;
-	margin-top: 20px;
+	margin-right: 0;
+	margin-top: 35px;
 	cursor: pointer;
 	height: 50px;
 	width: 50px;
 	text-align: center;
 	line-height: 50px;
 	color: #fff;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	transition: all .4s ease-in-out;
 }
 .item:hover{
@@ -119,7 +134,7 @@ p{
 .but{
 	position: relative;
 	height: 50px;
-	width: 150px;
+	width: 200px;
 	background: #222;
 	opacity: 0.85;
 	text-align: center;
@@ -141,7 +156,7 @@ p{
 	background-size: cover;
 }
 .speakers{
-	background: #fff;
+	background: #eee;
 	padding: 6em 6em 4em;
 }
 .prof{
@@ -177,10 +192,7 @@ p{
 .disc{
 	font-size: .8em;
 }
-a{
-	color: inherit;
-	text-decoration: none;
-}
+
 .new{
 	position: fixed;
 	z-index: 1000;
@@ -210,8 +222,40 @@ a{
 .scroll-itm:nth-child(1){
 	margin-left: 20px;
 }
-
-.about{
-	background:#eee;
-	padding: 6em 6em 5em;
+@keyframes down{
+	0%{
+		transform: translateY(-30px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+.exp{
+	animation: down 1s ease;
+	animation-iteration-count: 1;
+	backface-visibility: hidden;
+}
+@media (max-width: 600px){
+	.header{
+		display: none;
+	}
+	.x{
+		display: none;
+	}
+	.hero{
+		padding: 10em 4em 6em; 
+	}
+	.social{
+		top: 40vh;
+		right: 1em;
+		transform: translateY(-70%);
+	}
+}
+@media (max-width: 450px){
+	.about{
+		padding: 4em 4em 5em;
+	}
+	.contact{
+		padding: 4em 4em 5em;
+	}
 }
