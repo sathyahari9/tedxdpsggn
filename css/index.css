@@ -1,4 +1,6 @@
-
+*{
+	transition: all ease .4s;
+}
 .hero{
 	background: url(dk1.png) fixed center center;
 	background-size: cover;
@@ -43,6 +45,19 @@ a:hover{
 	z-index: 0;
 	height: 600px;
 	width: 600px;
+	animation: fade 4s ease;
+	animation-iteration-count: 1;
+}
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 .about p{
 	font-family: 'Open sans', sans-serif;
@@ -224,14 +239,39 @@ p{
 }
 @keyframes down{
 	0%{
-		transform: translateY(-30px);
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	25%{
+		transform: translateY(-50px);
+		opacity: 0;
 	}
 	100%{
 		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes up{
+	0%{
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	25%{
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
 	}
 }
 .exp{
-	animation: down 1s ease;
+	animation: down 1.5s ease;
+	animation-iteration-count: 1;
+	backface-visibility: hidden;
+}
+.up{
+	animation: up 2s ease;
 	animation-iteration-count: 1;
 	backface-visibility: hidden;
 }
