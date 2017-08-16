@@ -1,6 +1,7 @@
 var main= function(){
 	$(window).scroll(function(){
 		var wind = $(this).scrollTop();
+		var width = $(this).width;
 		if(wind>=100){
 			$('.header').addClass('new');
 			$('.menu-itm').addClass('scroll-itm');

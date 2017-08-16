@@ -275,6 +275,18 @@ p{
 	animation-iteration-count: 1;
 	backface-visibility: hidden;
 }
+.popup{
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-50%);
+	background: #fff;
+	border-radius: 2px;
+	height: 300px;
+	width: 300px;
+	padding: 30px;
+	z-index: 10000;
+}
 @media (max-width: 600px){
 	.header{
 		display: none;
